@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Hide Ci-en Banner Swiper",
+  "version": "1.1",
+  "description": "Hides the banner-swiper sections on ci-en.net profile pages with an on/off toggle.",
+  "permissions": [
+    "storage"
+  ],
+  "action": {
+    "default_title": "Ci-en Banner Toggle",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://ci-en.net/mypage*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
